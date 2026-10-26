@@ -29,4 +29,34 @@ order_month	      SUM of amount	       COUNT of order_id
 Grand Total	      346200	             63	
 
 ## (D) Reconciliation
+Function	      Spreadsheet	      Part A q05	      Result
+COUNT	          63	              63	              Match
+SUM	            346200	          346200	          Match
+AVERAGE	        5495.24	          5495.24	          Match
+
+## (E) Data Validation
+1. Missing Amount
+   1001, 1010, 1064 (from g02) are all pending, so the completed filter drops them. Left blank, not O: a O invents a value and drags averages down.
+2. Data Types
+   ISNUMBER is TRUE on amount, quantity, unit_price;
+   COUNT(K2.K64)= COUNTA= 63;
+   order_month passes ISTEXT
+3. Duplicates and outliers
+   COUNTUNIQUE(A2:A91) =90: no duplicate order_id.
+   Largest completed amount 15, 600 is shared by 1061, 1065, 1069, 1077 (3 Air Fryers x 5, 200); genuine, not an error.
+4. Decision for a colleague
+   Revenue counts completed orders only. Blank amounts stay blank, never 0. order_month stays plain text.
+
+## (F) Setup
+1. created tab names : orders, products
+2. Row count imported from orders = 90
+3. product table range = A1:C10
+4. Filter used : status = 'completed'
+5. sorting used : order_date ASC
+
+
+
+
+
+
 
