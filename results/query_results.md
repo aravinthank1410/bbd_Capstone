@@ -2,6 +2,7 @@ Seed Check
 
 Total Rows in each tables
 
++---------------+----------+
 | Table Name    |    Count |
 +---------------+----------+
 | 1. reps       |        4 |
